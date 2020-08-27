@@ -32,7 +32,7 @@ pipeline {
                               agent {
                                     docker {
                                             reuseNode true
-                                            image 'ubuntu'
+                                            image 'python:3.5.1'
                                            }
                                     }
                               steps {
