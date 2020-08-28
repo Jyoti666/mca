@@ -1,0 +1,26 @@
+pipeline {
+         agent any
+         stages {
+                 stage('Build') {
+                 steps {
+                     echo 'This is Build stage'
+                 }
+                 }
+                 stage('Test') {
+                 steps {
+                    echo 'This is Test stage'
+                 }
+              }
+              stage('Integrate') {
+                 steps {
+                    echo 'This is Integrate stage'
+                 }        
+                 
+              }
+              stage('Input') {
+                 steps {
+                    input('Do you want to proceed?')
+                 }
+              }
+       }
+}
